@@ -13,9 +13,10 @@ const List = ({places, childClicked, isLoading, type, setType, rating, setRating
     // console.log({childClicked})
     
     useEffect(() => {
-        const refs = Array(places.length).fill().map((_, i) => refs[i] || createRef())
+        const refs = Array(places?.length).fill()
+        const arr = refs?.map((_, i) => refs[i] || createRef())
 
-        setElementRefs(refs)
+        setElementRefs(arr)
     }, [places])
 
     return (
